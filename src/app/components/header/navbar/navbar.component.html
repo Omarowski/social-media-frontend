@@ -1,0 +1,66 @@
+
+
+   <nav class="nav">
+      <ul>
+        <li *ngFor="let element of headerAnchors; index as i">
+          <a [routerLink]= "element.route+ '/' + (element.dynamicPath || '')"
+          [ngClass]="{'selectedButton': selectedIndex === i}"
+          (click) = "onSelect(i)">
+            <i [ngClass]="[element.icon]"></i>
+            <p>{{selectedTabHeader}}</p>
+          </a>
+        </li>
+
+        <!-- <li>
+          <a [routerLink]="['/user-main-page', {username}]"
+          [ngClass]="{'selectedButton': selectedIndex === 5}"
+          (click) = "[onSelect(5)]">
+            <i class="fa-solid fa-user"></i>
+            <p>User</p>
+          </a>
+        </li> -->
+
+        <!-- Commented out in case we want to remove ngFor in the future -->
+<!--         
+        <li> 
+          <a [routerLink]="['/main-page']"
+          [ngClass]="{'selectedButton': selectedIndex === 0}"
+          (click) = "onSelect(0)">
+            <i class="fa-solid fa-house"></i>
+            <p>{{selectedTabHeader}}</p>
+          </a> 
+        </li>
+        <li>
+          <a [ngClass]="{'selectedButton': selectedIndex === 1}"
+          (click) = "onSelect(1)">
+            <i class="fa-solid fa-user">
+            </i>
+            <p>{{selectedTabHeader}}</p>
+          </a>
+        </li>
+        <li>
+          <a [ngClass]="{'selectedButton': selectedIndex === 2}"
+          (click) = "onSelect(2)">
+            <i class="fa-solid fa-users"></i>
+            <p>{{selectedTabHeader}}</p>
+          </a>
+        </li>
+        <li>
+          <a [routerLink]="['/messages']"
+          [ngClass]="{'selectedButton': selectedIndex === 3}"
+          (click) = "onSelect(3)">
+            <i class="fa-solid fa-message">
+            </i>
+            <p>{{selectedTabHeader}}</p>
+          </a>
+        </li>
+        <li>
+          <a [ngClass]="{'selectedButton': selectedIndex === 4}"
+          (click) = "onSelect(4)">
+            <i class="fa-solid fa-gear"></i>
+            <p>{{selectedTabHeader}}</p>
+          </a>
+        </li> -->
+        
+      </ul>
+    </nav>

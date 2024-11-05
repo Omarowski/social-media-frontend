@@ -1,0 +1,33 @@
+<div class="search-bar-container">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <input [(ngModel)]="query" (input)="onSearchInput(query)" type="text" placeholder="Search..."> 
+</div>
+
+<!-- Tab for Search Results -->
+<div *ngIf="users.length > 0" class="tab-container" cdkOverlayOrigin #overlayPosition="cdkOverlayOrigin">
+    <!-- Tab Header -->
+    
+    <ng-template
+     cdkConnectedOverlay
+     [cdkConnectedOverlayOrigin]="overlayPosition" 
+     [cdkConnectedOverlayOpen]="overlayOpen"
+     [cdkConnectedOverlayHasBackdrop]="true"
+     cdkConnectedOverlayBackdropClass="cdk-overlay-transparent-backdrop"
+     (backdropClick)="closeOverlay()">
+        <app-search-results-overlay [users]="users" [searchQuery]="query" (childClick)="viewUser($event)"></app-search-results-overlay>
+    </ng-template>
+
+    <!-- Tab Content (List of Results) -->
+    <!-- <div class="tab-content">
+      <ul>
+        <li *ngFor="let user of users" >
+          <a (click)="viewUser(user.firstName)"><strong>{{ user.firstName}}</strong> - {{ user.firstName }} {{ user.lastName }}</a>
+        </li>
+      </ul>
+    </div> -->
+  </div>
+  
+  <!-- No Results Found Message -->
+  <!-- <div *ngIf="users.length === 0 && query.length > 0">
+    <p>No users found for "{{ query }}"</p>
+  </div> -->

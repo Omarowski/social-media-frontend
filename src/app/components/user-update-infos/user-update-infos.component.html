@@ -1,0 +1,34 @@
+<div class="infos-overlay">
+    <div class="infos-content">
+      <h2>Modify your profile</h2>
+      <p>*Obligatory Fields</p>
+      <form (ngSubmit)="submit()">
+        <label for="name">Name*</label>
+        <input id="name" [(ngModel)]="name" name="name" required>
+        <label for="surname">Surname*</label>
+        <input id="surname" [(ngModel)]="surname" name="surname" required>
+        <label for="favourite-name">Favourite Name</label>
+        <input id="favourite-name" [(ngModel)]="favouriteName" name="favouriteName">
+        <label for="course-year">Course of Studies and year*</label>
+        <input id="course-year" [(ngModel)]="courseStudy" name="courseStudy" required>
+        <label for="job">Job if Any</label>
+        <input id="job" [(ngModel)]="job" name="job">
+        <label for="country">Country*</label>
+        <input id="country" [(ngModel)]="country" name="country" required>
+        <label for="city">City*</label>
+        <input id="city" [(ngModel)]="city" name="city" required>
+        <label for="post-code">Post Code</label>
+        <input id="post-code" [(ngModel)]="postCode" name="postCode">
+        <label for="phone">Phone Number</label>
+        <input id="phone" [(ngModel)]="phone" name="phone">
+        <label for="email">School e-mail</label>
+        <input id="email" [(ngModel)]="email" name="email">
+        <label for="website">Own Web-Site If any</label>
+        <input id="website" [(ngModel)]="website" name="website">
+        <div class="btn-container">
+            <button type="submit" class="submit-btn">Submit</button>
+            <button type="button" class="close-btn" (click)="close.emit()">Close</button>
+        </div>        
+      </form>
+    </div>
+  </div>

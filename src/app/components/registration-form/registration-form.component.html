@@ -1,0 +1,66 @@
+<div class="container">
+    <div class="image-container">
+        <img src="/assets/social-network-img.jpg" alt="Description of Image" />
+    </div>
+
+    <form class="form-group" *ngIf="!isSuccessful" [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+        <h2>Registration Form</h2>
+
+        <div>
+            <label for="firstName">Name:</label>
+            <input id="firstName" formControlName="firstName" placeholder="Name..." />
+            <div *ngIf="registrationForm.get('firstName')?.invalid && registrationForm.get('firstName')?.touched">
+                <small *ngIf="registrationForm.get('firstName')?.hasError('required')">Full Name is required.</small>
+                <small *ngIf="registrationForm.get('firstName')?.hasError('minlength')">Full Name must be at least 3 characters long.</small>
+            </div>
+        </div>
+        <div>
+            <label for="lastName">Surname:</label>
+            <input id="lastName" formControlName="lastName" placeholder="Surname..." />
+            <div *ngIf="registrationForm.get('lastName')?.invalid && registrationForm.get('lastName')?.touched">
+                <small *ngIf="registrationForm.get('lastName')?.hasError('required')">Full Name is required.</small>
+                <small *ngIf="registrationForm.get('lastName')?.hasError('minlength')">Full Name must be at least 3 characters long.</small>
+            </div>
+        </div>
+
+        <div>
+            <label for="email">Email:</label>
+            <input id="email" type="email" formControlName="email" placeholder="Email..." />
+            <div *ngIf="registrationForm.get('email')?.invalid && registrationForm.get('email')?.touched">
+                <small *ngIf="registrationForm.get('email')?.hasError('required')">Email is required.</small>
+                <small *ngIf="registrationForm.get('email')?.hasError('email')">Please enter a valid email.</small>
+            </div>
+        </div>
+
+        <div>
+            <label for="username">Username:</label>
+            <input id="username" formControlName="username" placeholder="Username..." />
+            <div *ngIf="registrationForm.get('username')?.invalid && registrationForm.get('username')?.touched">
+                <small *ngIf="registrationForm.get('username')?.hasError('required')">Username is required.</small>
+            </div>
+        </div>
+
+        <div>
+            <label for="password">Password:</label>
+            <input id="password" type="password" formControlName="password" placeholder="Password..." />
+            <div *ngIf="registrationForm.get('password')?.invalid && registrationForm.get('password')?.touched">
+                <small *ngIf="registrationForm.get('password')?.hasError('required')">Password is required.</small>
+                <small *ngIf="registrationForm.get('password')?.hasError('minlength')">Password must be at least 6 characters long.</small>
+            </div>
+        </div>
+
+        <div>
+            <label for="confirmPassword">Confirm Password:</label>
+            <input id="confirmPassword" type="password" formControlName="confirmPassword" placeholder="Repeat Password..." />
+            <div *ngIf="registrationForm.get('confirmPassword')?.invalid && registrationForm.get('confirmPassword')?.touched">
+                <small *ngIf="registrationForm.get('confirmPassword')?.hasError('required')">Please confirm your password.</small>
+                <small *ngIf="registrationForm.hasError('mismatch') && registrationForm.get('confirmPassword')?.touched">Passwords must match.</small>
+            </div>
+        </div>
+
+        <div>
+            <button class="sign-up" type="submit" [disabled]="registrationForm.invalid">Sign Up</button>
+            <button class="sign-in" type="button" (click)="goToLogin()">Sign in -></button>
+        </div>
+    </form>
+</div>

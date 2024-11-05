@@ -1,0 +1,74 @@
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet' type='text/css'>
+
+<!-- <div class="create-post-container">
+    <input type="text" placeholder="Create Post...">
+    <hr>
+    <div class="button-container">
+        <div class="button-icon-container">
+            <i class="fa-solid fa-camera" style="color: #63E6BE;"></i>
+            <p>Photo</p>
+        </div>
+        <div class="button-icon-container">
+            <i class="fa-solid fa-video" style="color: #74C0FC;"></i>
+            <p>Video</p>
+        </div>
+        <div class="button-icon-container">
+            <i class="fa-solid fa-calendar" style="color: #ffc800;"></i>
+            <p>Event</p>
+        </div>
+        <div class="button-icon-container create-post-button" >
+            <i class="fa-solid fa-paper-plane" style="color: #ffffff;"></i>
+            <p>Create</p>
+        </div>
+    </div>
+</div> -->
+
+<form class="create-post-container" (ngSubmit)="onSubmit()" enctype="multipart/form-data">
+    <!-- <div>
+      <label for="content">Post Content:</label>
+      <textarea id="content" [(ngModel)]="postContent" name="content" required></textarea>
+    </div> -->
+
+    <input id="content" [(ngModel)]="postContent" name="content" required type="text" placeholder="Create Post...">
+    <hr>
+    <input type="file" id="imageInput" (change)="onFileSelect($event, 'image')" accept="image/*" style="display: none;" />
+    <input type="file" id="videoInput" (change)="onFileSelect($event, 'video')" accept="video/*" style="display: none;" >
+    <div class="button-container"> 
+        <div class="button-icon-container"  (click)="triggerImageInput()">
+            <i class="fa-solid fa-camera" style="color: #63E6BE;"></i>
+            <p>Photo</p>
+        </div>
+
+        <div class="button-icon-container" (click)="triggerVideoInput()">
+            <i class="fa-solid fa-video" style="color: #74C0FC;"></i>
+            <p>Video</p>
+        </div>
+
+        <div class="button-icon-container create-post-button" >
+            <i class="fa-solid fa-paper-plane" style="color: #ffffff;"></i>
+            <p>Create</p>
+        </div>
+    </div>
+
+    <!-- <div>
+      <label for="image">Upload Image:</label>
+      <input type="file" id="image" (change)="onFileSelect($event, 'image')" accept="image/*">
+    </div>
+  
+    <div>
+      <label for="video">Upload Video:</label>
+      <input type="file" id="video" (change)="onFileSelect($event, 'video')" accept="video/*">
+    </div> -->
+
+    <!-- <div *ngIf="imagePreview">
+        <h3>Image Preview:</h3>
+        <img [src]="imagePreview" alt="Image preview" style="max-width: 100%; max-height: 300px;">
+      </div>
+      
+      <div *ngIf="videoPreview">
+        <h3>Video Preview:</h3>
+        <video [src]="videoPreview" controls style="max-width: 100%; max-height: 300px;"></video>
+      </div> -->
+  
+    <button type="submit">Create Post</button>
+  </form>

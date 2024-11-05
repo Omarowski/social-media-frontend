@@ -1,0 +1,17 @@
+.app-infos {
+    float: right;
+    width: 20%;    
+    height: 80%;
+    padding: 5px;
+
+}
+
+.app-infos img {
+    align-items: center;
+    width: 80%;     
+    height: 10%;    
+}
+.img-container{
+    /* background-color: rgb(247, 247, 247); */
+    margin-left: 30px;
+}

@@ -1,0 +1,47 @@
+app-side-panel {
+    grid-area: sidePanel;
+}
+
+.post-container {
+    grid-area: posts;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+}
+
+app-post {
+    
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.main-page-container {
+    
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+.main-post-content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 1rem;
+    
+}
+
+app-create-post-panel {
+    width: 53%;
+}
+
+app-filter-post {
+    width: 52.5%;
+}

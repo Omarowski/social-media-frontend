@@ -1,0 +1,46 @@
+<div class="side-post">
+  <div class="post-header">
+    <img src="user-img/{{post.profileImageUrl}}.jpg" alt="Profile Picture">
+    <div class="post-info">
+      <h3>User Name</h3>
+      <p>username</p>
+      <p>7 hours ago</p>
+    </div>
+  </div>
+  <hr>
+  <div class="post-content">
+    <p>{{post.postDescription}}</p>
+    <img *ngIf="post.postImage" [src]="'http://localhost:8080/' + post.postImage">
+    <video *ngIf="post.postVideo" controls>
+      <source [src]="'http://localhost:8080/' + post.postVideo" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div class="post-footer">
+    <div *ngIf="isLikedByCurrentUser; else elseBlock" class="icon-container">
+      <i (click)="unlikePost()" class="fa-solid fa-thumbs-up" style="color: #74C0FC;"></i>
+      <p>{{likeCount}}</p>
+      <p>Unlike</p>
+    </div>
+    <ng-template #elseBlock>
+      <div class="icon-container">
+        <i (click)="likePost()" class="fa-regular fa-thumbs-up"></i>
+        <p>{{likeCount}}</p>
+        <p>Like</p>
+      </div>
+    </ng-template>
+    <div class="icon-container">
+      <i><i class="fa-regular fa-comment"></i></i>
+      <p>Comment</p>
+    </div>
+    <div class="icon-container">
+      <i class="fa-regular fa-share-from-square"></i>
+      <p>Share</p>
+    </div>
+  </div>
+  <div class="comments-container" *ngFor="let comment of post.comments ">
+    <img class="comment-user-picture" src="user-img/{{comment.profileImg}}.jpg">
+    <p>{{comment.content}}</p>
+  </div>
+  <app-post-comment-panel [postId]="post.postId"></app-post-comment-panel>
+</div>

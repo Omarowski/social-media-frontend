@@ -1,0 +1,58 @@
+<!-- <app-header></app-header> -->
+<!-- <main>
+    <app-messages-history-panel></app-messages-history-panel>
+    <app-info-panel></app-info-panel>
+    <div class="chat-window">
+        <div class="user-infos">
+            <p class="username">Omar Atzori Langiu
+                <img src="../../../../assets/omar.jpg" alt="test img for user chat">
+            </p>
+            <p class="msg-email">s220950ppp.edu.pl</p>
+        </div>
+
+
+        <div *ngFor="let msg of messages">
+            <p class="username">{{this.users}}:</p>
+            <p class="message">{{ msg }}</p>
+        </div>
+    </div>
+    <div class="input-area">
+        <input type="text" (keydown.enter)="sendMessage()" [(ngModel)]="message" placeholder="Type your message..." />
+        <button (click)="sendMessage()">Send</button>
+    </div>
+</main> -->
+
+<!-- chat.component.html -->
+
+ <app-info-panel></app-info-panel>
+ <app-messages-history-panel [highlightedUser]="highlightedUser" [users]="users" (childClick)="selectUser($event)"></app-messages-history-panel>
+
+<div class="chat-container">
+    <!-- <div class="user-list">
+      <h3>Users</h3>
+      <ul>
+        <li *ngFor="let user of users" (click)="selectUser(user.firstName)">
+          {{ user.firstName }}
+        </li>
+      </ul>
+    </div> -->
+  
+    <div class="chat-window" *ngIf="selectedUser">
+      <h3>Chat with {{ selectedUser }}</h3>
+      <div class="messages">
+        <div *ngFor="let message of messages">
+
+          <div > <!-- [ngClass]="{'sender': message.sender.firstName === currentUser?.firstName, 'receiver': message.sender.firstName !== currentUser?.firstName}"-->
+            <strong>{{message.sender}}:</strong> {{message.content}}
+          </div>
+        </div>
+      </div>
+    </div>
+    <p *ngIf="typing">{{selectedUser}} is typing...</p>
+    <div class="input-box">
+      <!-- (keypress)="onTyping()" -->
+      <input  (keypress)="onTyping()" type="text" [(ngModel)]="messageContent" placeholder="Type a message">
+      <button (click)="sendMessageStomp()">Send</button>
+    </div>
+
+  </div>

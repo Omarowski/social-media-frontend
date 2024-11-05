@@ -1,0 +1,40 @@
+.nav {
+  
+}
+
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 2rem;
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+.nav ul li a {
+  color: #aaaaaa;
+  text-decoration: none;
+  font-size: 0px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.nav ul li a i {
+  font-size: 1.5rem;
+}
+  
+.nav a:hover {
+  color: #dfe3e8; /* Light gray */
+}
+
+
+.nav ul li .selectedButton {
+  color:#ff6e13;
+  font-size: 1rem;
+  font-family: 'Roboto';
+}

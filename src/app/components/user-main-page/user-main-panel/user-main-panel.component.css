@@ -1,0 +1,204 @@
+.main-panel-container {
+    position: relative;
+}
+
+.background-pic img {
+    width: 100%;
+    height: 120px;
+    display: block;
+}
+
+.user-img {
+    position: absolute;
+    top: 75px;
+    left: 20px;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+.user-img img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-infos {
+    margin: 50px 0px 0px 20px;
+}
+
+h3 {
+    font-size: large;
+}
+
+h4,
+h5 {
+    color: rgb(83, 83, 83);
+    margin: 10px 0px 10px 0px;
+}
+
+.main-panel-btns {
+    display: flex;
+    margin-left: none;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(194, 193, 193);
+}
+
+.contact-set-up {
+    background-color: #ff6e13;
+    color: white;
+    cursor: pointer;
+    border-radius: 20px;
+    padding: 8px 15px 8px 15px;
+    margin-left: 20px;
+    border: 1px solid rgb(122, 122, 122);
+}
+
+.contact-set-up-subscribed {
+    background-color: #0ea800;
+    color: white;
+    cursor: pointer;
+    border-radius: 20px;
+    padding: 8px 15px 8px 15px;
+    margin-left: 20px;
+    border: 1px solid rgb(122, 122, 122);
+}
+
+.send-msg {
+    background-color: white;
+    color: #ff6e13;
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 20px;
+    padding: 8px 15px 8px 15px;
+    border: 1px solid rgb(122, 122, 122);
+}
+
+.edit {
+    background-color: white;
+    color: rgb(87, 87, 87);
+    margin-left: 10px;
+    border-radius: 20px;
+    padding: 8px 15px 8px 15px;
+    border: 1px solid rgb(122, 122, 122);
+    cursor: pointer;
+}
+
+.more {
+    background-color: white;
+    color: rgb(87, 87, 87);
+    margin-left: 10px;
+    border-radius: 20px;
+    padding: 8px 15px 8px 15px;
+    border: 1px solid rgb(122, 122, 122);
+    cursor: pointer;
+}
+
+.general-infos {
+    padding: 20px;
+    border-bottom: 1px solid rgb(194, 193, 193);
+}
+
+.actions {
+    padding: 20px;
+    border-bottom: 1px solid rgb(194, 193, 193);
+
+}
+
+.actions h3 {
+    margin-bottom: 5px;
+}
+
+.actions p {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.all-activities {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid rgb(194, 193, 193);
+}
+
+#show-more-btn {
+    background-color: transparent;
+    color: rgb(83, 83, 83);
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#show-more-btn:hover {
+    color: #005a8d;
+}
+
+.work-experiences {
+    border-bottom: 1px solid rgb(194, 193, 193);
+}
+
+.work-experiences h3 {
+    padding: 20px;
+}
+
+.work-infos {
+    display: flex;
+    padding: 20px;
+}
+
+.work-infos h5 {
+    padding: 10px;
+}
+
+.blue-color {
+    background-color: #005a8d;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.orange-color {
+    background-color: rgba(255, 147, 23, 0.685);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.skills{
+    padding: 20px;
+    border-bottom: 1px solid rgb(194, 193, 193);
+}
+.all-skills {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid rgb(194, 193, 193);
+}
+
+.interests-header {
+    padding: 20px 20px 0px 20px;
+}
+
+.interests{
+    display: flex;
+    padding: 20px;
+}
+.interests p{
+    margin: 20px;
+}
+
+.sport{
+    display: flex ;
+    margin: 20px;
+}
+
+.sport img{
+    width: 80px;
+    height: 80px;
+}
+.tech{
+    display: flex ;
+    margin: 20px;
+}
+.tech img{
+    width: 80px;
+    height: 80px;
+}

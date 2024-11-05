@@ -1,0 +1,18 @@
+.filter-post-container {
+    background: #ffbf98;
+    width: 100%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem 0 1rem;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+    font-size: .9rem;
+
+}
+
+.filter-post-container select {
+    background-color:#ffbf98 ;
+    border: none;
+    font-family: 'Roboto';
+}

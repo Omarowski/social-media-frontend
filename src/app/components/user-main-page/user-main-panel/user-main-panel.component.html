@@ -1,0 +1,89 @@
+<div class="main-panel-container">
+    <div>
+        <div class="background-pic">
+            <img src="tech/tech-img.jpeg">
+        </div>
+        <div class="user-img">
+            <img src="user-img/{{currentUser?.profileImageUrl}}.jpg" alt="profile-img">
+        </div>
+    </div>
+    <div class="user-infos">
+        <h3>
+            {{currentUser?.firstName}} {{currentUser?.lastName}}
+        </h3> 
+        <h4>
+            {{currentUser?.position}}
+        </h4>
+        <h5>
+            Full-stuck developer with Angular, Spring Boot and MySql
+        </h5> 
+    </div>
+    <div class="main-panel-btns">
+        <div *ngIf="currentUser?.firstName != loggedInUser?.firstName">
+            <div *ngIf="!isUserSubscribed; else elseBlock">
+                <button
+                class="contact-set-up"
+                 type="button" (click)="subscribe()">Subscribe!</button>
+            </div>
+
+            <ng-template #elseBlock>
+                <button class="contact-set-up-subscribed" type="button" (click)="unsubscribe()">Subscribed!</button>
+              </ng-template>
+            
+            <div> 
+                <input type="text" [(ngModel)]="messageContent" placeholder="Send a message....">
+                <button class="send-msg" type="button" (click)="sendMessage()">Send a message</button>
+            </div>
+        </div>
+       
+        <button class="edit" type="button" (click)="gotoEdit()">Edit</button>
+        <button class="more">More</button>
+    </div>
+    <div class="general-infos">
+        <h3>
+            General Information
+        </h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac ornare odio. Curabitur vitae velit ultricies, lobortis tellus quis, tempus ante. </p>
+    </div>
+    <div class="actions">
+        <h3>Actions</h3>
+        <p>25k Followers</p>
+        <h4>Implemented the best website of his life the pjwstk University</h4>
+    </div>
+    <div class="all-activities">
+        <button id="show-more-btn">Show all activities &rarr;</button>
+    </div>
+    <div class="work-experiences">
+        <h3>Work experiences</h3>
+        <div class="work-infos">
+            <div class="blue-color"></div>
+            <h5>Freelance Full-Stack developer</h5>
+        </div>
+        <div class="work-infos">
+            <div class="orange-color"></div>
+            <h5>UX/UI Designer</h5>
+        </div>
+    </div>
+    <div class="skills">
+        <h3>Skills</h3>
+        <p>Advanced Java Programming</p>
+        <p>Angular</p>
+        <p>Spring Boot</p>
+    </div>
+    <div class="all-skills">
+        <button id="show-more-btn">Show all Skills &rarr;</button>
+    </div>
+    <div class="interests-header">
+        <h3>Interests</h3>
+    </div>
+    <div class="interests">
+        <div class="sport">
+            <img src="../../../assets/Lebron.jpeg">
+            <p>Lebron James</p>
+        </div>
+        <div class="tech">
+            <img src="../../../assets/tech/Microsoft.webp">
+            <p>Microsoft</p>
+        </div>
+    </div>
+</div>

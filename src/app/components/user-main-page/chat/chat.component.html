@@ -1,0 +1,25 @@
+<!-- src/app/chat/chat.component.html -->
+<div *ngIf="!connected">
+    <input [(ngModel)]="username" placeholder="Enter your name" />
+    <button (click)="connect()">Connect</button>
+  </div>
+  
+  <div *ngIf="connected">
+    <div class="chat-window">
+      <div *ngFor="let message of messages">
+        <div *ngIf="message.type === 'CHAT'">
+          <strong>{{ message.sender }}</strong>: {{ message.content }}
+        </div>
+        <div *ngIf="message.type === 'JOIN'">
+          <em>{{ message.sender }} has joined the chat</em>
+        </div>
+        <div *ngIf="message.type === 'LEAVE'">
+          <em>{{ message.sender }} has left the chat</em>
+        </div>
+      </div>
+    </div>
+  
+    <input [(ngModel)]="messageContent" placeholder="Enter a message" />
+    <button (click)="sendMessage()">Send</button>
+    <button (click)="disconnect()">Disconnect</button>
+  </div>

@@ -1,0 +1,53 @@
+
+<!-- <h3>Chat:</h3> -->
+<div class="history-container">
+    <div class="user-history-container" *ngFor="let user of users; index as i" 
+    (click)="selectUser(user.firstName, i)" 
+    [ngClass]="{'selectedButton': isSelected === i, 'highlight': highlightedUser === i}"> 
+        <div #myInputs class="name">
+            <img src="user-img/{{user.profileImageUrl}}.jpg" alt="test Image for chat">
+            <div>
+                <p>{{user?.firstName}} {{user.lastName}}</p>
+                <p>{{user?.latestMessage}}</p>
+            </div>
+           
+            
+        </div>
+    </div>
+   
+    
+
+    <!-- <div class="message">
+    <div class="name">
+        <img src="../../../../assets/omar.jpg" alt="test Image for chat">
+        <p >Omar</p>
+    </div>
+    
+        <p>edaldjaldjabf;sakfd a;dk'akdnas;jfnadsk'akdn'sajlfam
+            fdk'nakfd
+            la,fdm'kasmfdafnd'a
+        </p>
+    </div>
+    <div class="message">
+    <div class="name">
+        <img src="../../../../assets/omar.jpg" alt="test Image for chat">
+        <p>Diego</p>
+    </div>
+        <p>edaldjaldjabf;sakfd a;dk'akdnas;jfnadsk'akdn'sajlfam
+            fdk'nakfd
+            la,fdm'kasmfdafnd'a
+        </p>
+    </div>
+    <div class="message">
+    <div class="name">
+        <img src="../../../assets/omar.jpg" alt="test Image for chat">
+        <p class="name">Luca</p>
+
+    </div>
+    
+        <p>edaldjaldjabf;sakfd a;dk'akdnas;jfnadsk'akdn'sajlfam
+            fdk'nakfd
+            la,fdm'kasmfdafnd'a
+        </p>
+    </div> -->
+</div>

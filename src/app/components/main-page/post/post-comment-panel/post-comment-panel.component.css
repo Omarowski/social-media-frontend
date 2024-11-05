@@ -1,0 +1,39 @@
+.post-comment-container {
+    display: flex;
+    gap: .5rem;
+}
+
+.post-comment-container img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.post-comment-container input {
+    flex: 1;
+    border-radius: 5px;
+    border: 1px solid rgb(171, 171, 171);
+}
+
+.post-comment-container input::placeholder {
+   padding-left: 1rem;
+}
+
+.post-comment-container .send-button-container {
+    width: 8%;
+    font-size: 1.1rem;
+    border: 1px solid rgb(171, 171, 171);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: rgb(84, 167, 255);
+}
+
+.post-comment-container .send-button-container:hover {
+    background-color: rgb(84, 167, 255);
+    color: white;
+    transition: ease-in-out 0.33s ;
+}
+

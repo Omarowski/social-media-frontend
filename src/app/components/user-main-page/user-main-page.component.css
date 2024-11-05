@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+    justify-content: center; /* Centers the main panel */
+    /* align-items: flex-start; */
+    position: relative;
+    padding: 15px 30px 15px 30px;
+    /* margin: 15px; */
+}
+
+/* Main Panel Styling */
+app-user-main-panel {
+    width: 60%; /* Adjust width to control the size of the main panel */
+    background-color: white;
+    padding: 0;
+    margin-right: none; 
+    margin-left: 70px;
+}
+
+/* Side Panel Styling */
+app-user-side-panel {
+    width: 20%; 
+    margin-left: 150px;
+    padding: none;
+    /* position: absolute;  */
+    right: 0; /* Aligns the side panel to the right */
+}

@@ -1,0 +1,39 @@
+.search-bar-container {
+    display: flex;
+    width: 100%;
+    background-color: rgb(240, 240, 240);
+    padding: .2rem .5rem .2rem .5rem;
+}
+
+
+.search-bar-container i {
+    margin: auto;
+    color: rgb(171, 171, 171);
+}
+
+.search-bar-container input {
+        height: 3rem;
+        width: 100%;
+        background-color: rgb(240, 240, 240);
+        border: none;
+}
+
+i {
+    color: #000;
+}
+
+.tab-content {
+color: #000;
+}
+
+.tab-container {
+    position: absolute;
+    background-color: white;
+    width: 50%;
+}
+
+.tab-header {
+    color: #000;
+    z-index: 1;
+}
+
